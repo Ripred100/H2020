@@ -3,11 +3,16 @@
 #S = Level you must go to
 
 # case 1:
-K = 5
-S = 3
-N = 8
+TCases = input()
 
-TimeGoBack = (K-1) + (K-S) + (N-S + 1)
-TimeRestart = (K-1) + N
+
+for i in range(TCases):
+    N,K,S = input().split()
+    TimeGoBack = (K-1) + (K-S) + (N-S + 1)
+    TimeRestart = (K-1) + N
+    minTime = min(TimeGoBack,TimeRestart)
+    print(f'Case #{i}: {minTime}')
+
+
 
 
